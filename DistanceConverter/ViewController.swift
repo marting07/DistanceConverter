@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         milesTextField.text = "\(distance.miles)"
         kmTextField.text = "\(distance.km)"
+        kmTextField.addTarget(self, action: #selector(convertToMiles), for: .editingChanged)
     }
     
     @IBAction func convertToKm(_ sender: Any) {
